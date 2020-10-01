@@ -4,12 +4,134 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>project</title>
+  <title>KOLINIK</title>
+  <link rel="shortcut icon" type="image/x-icon" href="./images/logo/favicon.png" />
   <link rel="stylesheet" href="./css/style.min.css">
 </head>
 
 <body>
-
+  <header class="header">
+    <div class="container">
+      <div class="header__inner">
+        <div class="header__info">
+          <a href="#" class="link">
+            <img src="./images/logo/logo.png" alt="logo image" class="header__logo">
+          </a>
+          <address class="header__address">
+            <div class="header__address-item">
+              <div class="header__info-icon icon-map-marker"></div>
+              <div class="header__address-description">
+                <div class="header__address-title">Location</div>
+                <a href="#" class="header__address-link link">Medino, NY 10012, USA</a>
+              </div>
+            </div>
+            <div class="header__address-item">
+              <div class="header__info-icon icon-envelope"></div>
+              <div class="header__address-description">
+                <div class="header__address-title">Email Address</div>
+                <a href="mailto:democompany.com" class="header__address-link link">democompany.com</a>
+              </div>
+            </div>
+          </address>
+          <a class="header__phone" href="tel:1234567">
+            Hotline - 1234567
+          </a>
+        </div>
+        <div class="header__menu">
+          <nav class="header__nav">
+            <ul class="header__nav-list list">
+              <li class="header__nav-item">
+                <a href="#" class="header__link link">Home</a>
+              </li>
+              <li class="header__nav-item">
+                <a href="#" class="header__link link">About</a>
+              </li>
+              <li class="header__nav-item">
+                <a href="#" class="header__link link">Service</a>
+              </li>
+              <li class="header__nav-item">
+                <a href="#" class="header__link link">Doctor</a>
+              </li>
+              <li class="header__nav-item">
+                <a href="#" class="header__link link">Blog</a>
+              </li>
+              <li class="header__nav-item">
+                <a href="#" class="header__link link">Contact</a>
+              </li>
+            </ul>
+          </nav>
+          <form action="" class="header__form">
+            <input type="text" class="header__input">
+            <button class="header__submit icon-search" type="submit"></button>
+          </form>
+        </div>
+      </div>
+    </div>
+  </header>
+  <main class="main">
+    <section class="preview" style="background-image: url(./images/preview/bg.jpg);">
+      <div class="container">
+        <div class="preview__inner">
+          <div class="preview__title">
+            Meet with your best doctor here
+          </div>
+          <div class="preview__text">
+            Ridiculus elit amet sagittis arcu cras ornare, amet a amet urna, vitae cras. Ipsum sociosqu.
+          </div>
+          <div class="preview__links-container">
+            <a href="#" class="preview__link link">appointment</a>
+            <a href="#" class="preview__link link">learn more</a>
+          </div>
+        </div>
+      </div>
+    </section>
+    <section class="information">
+      <div class="container">
+        <div class="information__inner">
+          <div class="information__item">
+            <div class="information__image icon-clock-o"></div>
+            <div class="information__description">
+              <div class="information__title">Friday to Satday</div>
+              <time class="information__text">08:30 am to 05:00 pm</time>
+            </div>
+          </div>
+          <div class="information__item">
+            <div class="information__image icon-map-marker"></div>
+            <div class="information__description">
+              <div class="information__title">Offices addresss</div>
+              <address class="information__text">Gene Rest, North Audreanneville</address>
+            </div>
+          </div>
+          <div class="information__item">
+            <div class="information__image icon-envelope"></div>
+            <div class="information__description">
+              <div class="information__title">Email Address</div>
+              <a href="mailto:democompany.com" class="information__text link">democompany.com</a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+    <section class="appointment" style="background-image: url(./images/appointment/doctor.png);">
+      <div class="container">
+        <div class="appointment__inner">
+          <div class="appointment__title">Book Appointment</div>
+          <form class="appointment__form">
+            <select name="" id="" class="appointment__input">
+              <option disabled selected>Select Department</option>
+            </select>
+            <select name="" id="" class="appointment__input">
+              <option disabled selected>Select Doctor</option>
+            </select>
+            <input type="text" class="appointment__input" placeholder="Full Name">
+            <input type="text" class="appointment__input" placeholder="Phone Number">
+            <input type="date" class="appointment__input" placeholder="Appointment Date">
+            <buttom class="appointment__submit" type="submit">book your appointment</buttom>
+          </form>
+        </div>
+      </div>
+    </section>
+  </main>
   <script src="./js/main.min.js"></script>
 </body>
 

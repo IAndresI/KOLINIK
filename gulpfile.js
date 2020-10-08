@@ -11,7 +11,7 @@ let gulp = require("gulp"),
   webpack = require("webpack-stream");
 
 
-const scss = () => {
+const style = () => {
   return gulp
     .src("app/scss/style.scss")
     .pipe(sass({
@@ -29,7 +29,7 @@ const scss = () => {
     }));
 };
 
-exports.scss = scss;
+exports.style = style;
 
 const html = () => {
   return gulp.src("./app/*.html").pipe(browserSync.reload({
@@ -39,18 +39,10 @@ const html = () => {
 
 exports.html = html;
 
-const js = () => {
-  return gulp.src("./app/js/*.js").pipe(browserSync.reload({
-    stream: true
-  }));
-}
-
-exports.js = js;
-
 const watch = () => {
-  gulp.watch("./app/scss/*.scss", gulp.parallel(scss));
+  gulp.watch("./app/scss/*.scss", gulp.parallel(style));
   gulp.watch("./app/*.html", gulp.parallel(html));
-  gulp.watch("./app/js/*.js", gulp.parallel(js));
+  gulp.watch("./app/js/main.js", gulp.parallel(script));
 }
 
 exports.watch = watch;
@@ -66,17 +58,6 @@ const browserS = () => {
 exports.browserS = browserS;
 
 const script = () => {
-
-  return gulp
-    .src(["app/js/main.js"])
-    .pipe(concat("main.min.js"))
-    .pipe(uglify())
-    .pipe(gulp.dest("app/js"));
-}
-
-exports.script = script;
-
-const style = () => {
   return gulp
     .src(["app/js/main.js"])
     .pipe(
@@ -100,9 +81,9 @@ const style = () => {
     }));
 }
 
-exports.style = style;
+exports.script = script;
 
 gulp.task(
   "default",
-  gulp.parallel(watch, browserS, scss, style, script)
+  gulp.parallel(watch, browserS, style, script)
 );

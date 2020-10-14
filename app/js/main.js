@@ -43,16 +43,8 @@ document.addEventListener("DOMContentLoaded", function () {
     placeholder: "Select Doctor"
   });
 
-  tabs({
-    button: ".department__button",
-    content: ".department__item",
-    activeClass: ".department__button--active",
-    animate: true,
-    tabToShow: 0
-  });
-
   slider({
-    slider__item: ".review__item",
+    sliderItem: ".review__item",
     slidesToShow: 2,
     speed: 1000,
     dots: false,
@@ -60,5 +52,42 @@ document.addEventListener("DOMContentLoaded", function () {
       breakPoint: 780,
       slidesToShow: 1
     }]
+  });
+
+  let burgerButton = document.querySelector(".header__burger"),
+    menu = document.querySelector(".header__nav-list");
+
+  burgerButton.addEventListener("click", () => {
+    burgerButton.classList.toggle("header__burger--active");
+    menu.classList.toggle("header__nav-list--active");
+  });
+
+  slider({
+    sliderItem: ".department__button-item",
+    speed: 1000,
+    slidesToShow: document.querySelectorAll(".department__button-item").length,
+    slidesToScroll: 1,
+    dots: false,
+    responsive: [{
+        breakPoint: 992,
+        slidesToShow: 3,
+      },
+      {
+        breakPoint: 640,
+        slidesToShow: 2,
+      },
+      {
+        breakPoint: 420,
+        slidesToShow: 1,
+      }
+    ]
+  });
+
+  tabs({
+    button: ".department__button",
+    content: ".department__item",
+    activeClass: ".department__button--active",
+    animate: true,
+    tabToShow: 0
   });
 });

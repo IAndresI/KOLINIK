@@ -1,7 +1,294 @@
-@media(max-width: 1200px) {}
+@media(max-width: 1200px) {
 
-@media(max-width: 992px) {}
+  .department {
+    &__item {
+      flex-direction: column;
+    }
 
-@media(max-width: 768px) {}
+    &__image-container {
+      width: fit-content;
+      margin: 0 auto;
+    }
 
-@media(max-width: 576px) {}
+    &__bg-image {
+      height: 100%;
+      width: 100%;
+      object-fit: cover;
+    }
+  }
+
+  .doctors {
+    &__list {
+      flex-wrap: wrap;
+      justify-content: center;
+    }
+  }
+
+  .appointment {
+    background-position: left;
+
+    &__inner {
+      margin: 0 auto;
+      background-color: #ffffff;
+    }
+  }
+
+  .header {
+    &__phone {
+      display: none;
+    }
+
+    &__info {
+      justify-content: space-between;
+    }
+
+    &__address {
+      width: 100%;
+      justify-content: space-around;
+    }
+  }
+}
+
+@media(max-width: 992px) {
+
+  .services {
+    &__item {
+      margin: 0 5px 15px;
+    }
+  }
+
+  .appointment {
+    background-image: none !important;
+  }
+
+  .information {
+
+    &__item {
+      width: 100%;
+    }
+
+    &__inner {
+      flex-direction: column;
+      align-items: center;
+    }
+
+    &__image {
+      justify-content: flex-end;
+    }
+  }
+
+  .header {
+    &__menu {
+      flex-direction: column;
+    }
+
+    &__nav {
+      margin-bottom: 20px;
+    }
+
+    &__form {
+      max-width: 600px;
+      width: 100%;
+    }
+
+    &__input {
+      width: 100%;
+    }
+  }
+}
+
+@media(max-width: 768px) {
+
+  .title {
+    &--special {
+      flex-direction: column;
+
+      .title {
+        &__main {
+          text-align: center;
+          padding-right: 0;
+          margin-right: 0;
+          margin-bottom: 60px;
+
+          &::after {
+            height: 5px;
+            width: 40px;
+            left: 50%;
+            bottom: -27px;
+            top: auto;
+            transform: translate(-50%, 0);
+          }
+        }
+
+        &__text {
+          text-align: center;
+        }
+      }
+    }
+  }
+
+  .doctors {
+    &__item {
+      max-width: 100%;
+    }
+  }
+
+  .services {
+    &__item {
+      margin: 0 5px 20px;
+      max-width: 100%;
+    }
+  }
+
+  .appointment {
+    &__inner {
+      width: 100%;
+    }
+  }
+
+  .header {
+
+    &__menu {
+      border-radius: 10px;
+    }
+
+    &__burger {
+      display: block;
+      margin: 0 auto;
+    }
+
+    &__nav-list {
+      max-height: 0;
+      overflow: hidden;
+      flex-direction: column;
+      background-color: #ffffff;
+      transition: all 1s;
+      position: absolute;
+      width: 100%;
+      left: 0;
+      right: 0;
+      top: 90px;
+      z-index: 1;
+      border-radius: 0 0 10px 10px;
+
+      &--active {
+        max-height: 500px;
+      }
+    }
+
+    &__link {
+      color: $blue;
+      display: block;
+      width: 100%;
+      text-align: center;
+      padding: 15px 0;
+
+      &:hover,
+      &:focus {
+        background-color: $blue;
+        color: #ffffff;
+      }
+
+      &:active {
+        background-color: #ffffff;
+        color: $blue;
+      }
+    }
+
+    &__nav-item {
+      margin-right: 0;
+    }
+
+    &__address {
+      flex-direction: column;
+    }
+
+    &__address-item {
+      margin: 0 0 15px;
+
+      &:last-child {
+        margin-bottom: 0;
+      }
+    }
+
+    &__menu {
+      top: 130px;
+    }
+  }
+}
+
+@media(max-width: 576px) {
+
+  .department {
+
+    &__image-container {
+      min-width: 100%;
+      height: 300px;
+    }
+
+    &__bg-image {
+      height: 100%;
+      width: 100%;
+      object-fit: cover;
+    }
+  }
+
+  .doctors {
+    &__item {
+      padding-left: 10px;
+      padding-right: 10px;
+      margin-top: 80px;
+    }
+  }
+
+  .services {
+    &__item {
+      padding: 20px 10px;
+    }
+  }
+
+  .information {
+    &__item {
+      padding: 10px;
+    }
+  }
+
+  .preview {
+    text-align: center;
+
+    &__title {
+      font-size: 50px;
+      margin-top: 120px;
+    }
+  }
+
+  .header {
+
+    &__menu {
+      padding-left: 10px;
+      padding-right: 10px;
+    }
+
+    &__info {
+      flex-direction: column;
+    }
+
+    &__info-icon {
+      margin-right: 0;
+      margin-bottom: 10px;
+    }
+
+    &__menu {
+      top: 340px;
+    }
+
+    &__address-item {
+      text-align: center;
+      flex-direction: column;
+    }
+
+    &__logo-link {
+      margin: 0 auto 30px;
+    }
+  }
+}

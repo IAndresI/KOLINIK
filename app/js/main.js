@@ -49,7 +49,7 @@ document.addEventListener("DOMContentLoaded", function () {
     speed: 1000,
     dots: false,
     responsive: [{
-      breakPoint: 780,
+      breakPoint: 1100,
       slidesToShow: 1
     }]
   });

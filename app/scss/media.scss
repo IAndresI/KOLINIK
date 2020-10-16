@@ -51,6 +51,61 @@
 
 @media(max-width: 992px) {
 
+  .expirience {
+    &__inner {
+      flex-direction: column;
+    }
+
+    &__image-container {
+      display: none;
+    }
+  }
+
+  .provide {
+
+    &__inner {
+      flex-direction: column;
+    }
+
+    &__slider {
+      margin-right: 0;
+      margin-bottom: 30px;
+      min-width: 100%;
+    }
+
+    .title--special {
+      flex-direction: column;
+
+      .title {
+        &__main {
+          text-align: center;
+          padding-right: 0;
+          margin-right: 0;
+          margin-bottom: 60px;
+
+          &::after {
+            height: 5px;
+            width: 40px;
+            left: 50%;
+            bottom: -27px;
+            top: auto;
+            transform: translate(-50%, 0);
+          }
+        }
+
+        &__text {
+          text-align: center;
+        }
+      }
+    }
+
+    &__title {
+      flex-direction: column;
+
+
+    }
+  }
+
   .footer {
 
     &__sponsor-list {
@@ -195,12 +250,16 @@
   }
 
   .doctors {
+    padding: 60px 0;
+
     &__item {
       max-width: 100%;
     }
   }
 
   .services {
+    padding: 60px 0;
+
     &__item {
       margin: 0 5px 20px;
       max-width: 100%;
@@ -208,6 +267,8 @@
   }
 
   .appointment {
+    padding: 60px 0;
+
     &__inner {
       width: 100%;
     }
@@ -217,6 +278,7 @@
 
     &__menu {
       border-radius: 10px;
+      top: 85px;
     }
 
     &__burger {
@@ -277,14 +339,54 @@
         margin-bottom: 0;
       }
     }
+  }
 
-    &__menu {
-      top: 130px;
-    }
+  .services,
+  .review,
+  .theatre,
+  .plan,
+  .news {
+    padding: 60px 0;
+  }
+
+  .department {
+    padding-bottom: 60px;
   }
 }
 
 @media(max-width: 576px) {
+
+  .newsletter {
+    &__title {
+      font-size: 30px;
+    }
+
+    &__submit {
+      padding: 0 10px;
+    }
+
+    &__input {
+      padding-right: 60px;
+    }
+  }
+
+  .expirience {
+    &__description-title {
+      font-size: 30px;
+    }
+  }
+
+  .provide {
+    &__title {
+      .title__main {
+        min-width: 100%;
+      }
+    }
+
+    &__description-title {
+      font-size: 30px;
+    }
+  }
 
   .news {
     &__item {
@@ -416,10 +518,6 @@
     &__info-icon {
       margin-right: 0;
       margin-bottom: 10px;
-    }
-
-    &__menu {
-      top: 340px;
     }
 
     &__address-item {

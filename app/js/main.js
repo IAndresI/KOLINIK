@@ -54,6 +54,7 @@ document.addEventListener("DOMContentLoaded", function () {
     }]
   });
 
+
   let burgerButton = document.querySelector(".header__burger"),
     menu = document.querySelector(".header__nav-list");
 

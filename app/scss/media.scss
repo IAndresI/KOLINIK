@@ -29,7 +29,6 @@
 
     &__inner {
       margin: 0 auto;
-      background-color: #ffffff;
     }
   }
 
@@ -181,6 +180,19 @@
 
   .appointment {
     background-image: none !important;
+
+    &__description {
+      margin-bottom: 30px;
+    }
+
+    &__form-container {
+      margin: 0 auto 30px !important;
+      order: 1;
+    }
+
+    &__inner {
+      flex-direction: column;
+    }
   }
 
   .information {

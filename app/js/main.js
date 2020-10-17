@@ -54,6 +54,14 @@ document.addEventListener("DOMContentLoaded", function () {
     }]
   });
 
+  slider({
+    sliderItem: ".provide__slider-item",
+    slidesToShow: 1,
+    speed: 1000,
+    dots: false,
+    sliderButtonNext: ".provide__button--next",
+    sliderButtonPrev: ".provide__button"
+  });
 
   let burgerButton = document.querySelector(".header__burger"),
     menu = document.querySelector(".header__nav-list");

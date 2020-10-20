@@ -275,6 +275,23 @@
     &__item {
       margin: 0 5px 20px;
       max-width: 100%;
+
+      &--frameless {
+        .services {
+          &__header-container {
+            flex-direction: column;
+            align-items: center;
+          }
+
+          &__image {
+            width: fit-content;
+          }
+
+          &__text {
+            text-align: center;
+          }
+        }
+      }
     }
   }
 

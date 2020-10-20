@@ -99,4 +99,35 @@ document.addEventListener("DOMContentLoaded", function () {
     animate: true,
     tabToShow: 0
   });
+
+  let videoButton = document.querySelector(".theatre__button"),
+    closeButton = document.querySelector(".popup__button"),
+    popup = document.querySelector(".popup"),
+    popupVideo = document.querySelector(".popup__video");
+  if (popupVideo) {
+    let popupVideoSrc = popupVideo.getAttribute("src"),
+      marginR = window.innerWidth - document.documentElement.clientWidth + "px";
+
+    videoButton.addEventListener("click", () => {
+      popupVideo.setAttribute("src", popupVideoSrc);
+      document.documentElement.style.overflow = "hidden";
+      document.documentElement.style.marginRight = marginR;
+      popup.style.display = "flex";
+      setTimeout(() => {
+        popup.classList.add("popup--open");
+      }, 0);
+    });
+
+    popup.addEventListener("click", (e) => {
+      if (!e.target.classList.contains("popup__video") || e.target == closeButton) {
+        popup.classList.remove("popup--open");
+        document.documentElement.style.overflow = "visible";
+        document.documentElement.style.marginRight = 0;
+        setTimeout(() => {
+          popup.style.display = "none";
+        }, 1000);
+        popupVideo.setAttribute("src", "");
+      }
+    });
+  }
 });

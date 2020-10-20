@@ -2,6 +2,84 @@
 @import "_vars";
 @import "_global";
 
+.popup {
+  position: fixed;
+  background-color: rgba(0, 0, 0, .9);
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  display: none;
+  opacity: 0;
+
+  transition: all 1s;
+
+  &--open {
+    opacity: 1;
+
+    .popup__video {
+      transform: translateY(0);
+    }
+  }
+
+  &__video {
+    width: 80%;
+    height: 80%;
+    transform: translateY(-200%);
+    transition: all 1s;
+  }
+
+  &__button {
+    position: absolute;
+    top: 0;
+    right: 0;
+    height: 100px;
+    width: 100px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: transparent;
+    border: none;
+    cursor: pointer;
+
+    &:after,
+    &:before {
+      content: "";
+      position: absolute;
+      width: 50px;
+      height: 5px;
+      background-color: $blue;
+      transform: rotate(45deg);
+      transition: all .5s
+    }
+
+    &:before {
+      transform: rotate(-45deg);
+    }
+
+    &:focus,
+    &:hover {
+      outline: transparent;
+
+      &:after,
+      &:before {
+        background-color: #ffffff;
+      }
+    }
+
+    &:active {
+
+      &:after,
+      &:before {
+        background-color: $blue;
+      }
+    }
+  }
+}
+
 .header {
   padding-top: 25px;
 
@@ -668,10 +746,40 @@
     text-align: center;
     padding: 60px 40px;
     margin: 0 10px 30px;
+
+    &--frameless {
+      padding: 0;
+      box-shadow: none !important;
+
+      .services {
+        &__header-container {
+          display: flex;
+          margin-bottom: 30px;
+        }
+
+        &__image {
+          min-width: 70px;
+          height: 70px;
+          background-size: cover;
+          margin: 0 10px 0 0;
+        }
+
+        &__name {
+          display: flex;
+          align-items: center;
+          text-align: left;
+          margin-bottom: 0;
+        }
+
+        &__text {
+          text-align: left;
+        }
+      }
+    }
   }
 
   &__image {
-    width: 90px;
+    min-width: 90px;
     height: 90px;
     margin: 0 auto 30px;
   }

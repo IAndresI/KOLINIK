@@ -100,6 +100,14 @@ document.addEventListener("DOMContentLoaded", function () {
     tabToShow: 0
   });
 
+  tabs({
+    button: ".aside__button",
+    content: ".details__content",
+    activeClass: ".aside__button--active",
+    tabToShow: 0,
+    noContentAlert: ".details__nocontent"
+  });
+
   let videoButton = document.querySelector(".theatre__button"),
     closeButton = document.querySelector(".popup__button"),
     popup = document.querySelector(".popup"),
@@ -130,4 +138,22 @@ document.addEventListener("DOMContentLoaded", function () {
       }
     });
   }
+
+  let detailsButton = document.querySelector(".details__menu"),
+    detailFilter = document.querySelector(".details__aside"),
+    detailsCloseButton = document.querySelector(".aside__menu"),
+    marginR = window.innerWidth - document.documentElement.clientWidth + "px";
+
+
+
+  detailsButton.addEventListener("click", () => {
+    detailFilter.classList.add("aside--opened");
+    document.documentElement.style.marginRight = marginR;
+    document.documentElement.style.overflow = "hidden";
+  });
+  detailsCloseButton.addEventListener("click", () => {
+    detailFilter.classList.remove("aside--opened");
+    document.documentElement.style.marginRight = 0;
+    document.documentElement.style.overflow = "visible";
+  });
 });

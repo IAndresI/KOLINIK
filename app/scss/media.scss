@@ -229,6 +229,42 @@
       width: 100%;
     }
   }
+
+  .aside {
+    position: fixed;
+    top: 0;
+    background-color: #fff;
+    left: -100%;
+    height: 100vh;
+    overflow-y: scroll;
+    z-index: 1;
+    padding: 20px;
+
+    &__menu {
+      display: block;
+    }
+
+    &--opened {
+      left: 0;
+      max-width: 400px;
+    }
+  }
+
+  .details {
+    padding: 40px 0 0;
+
+    &__content {
+      margin-right: 0;
+    }
+
+    &__menu {
+      display: flex;
+    }
+
+    &__inner {
+      flex-direction: column;
+    }
+  }
 }
 
 @media(max-width: 768px) {
@@ -300,6 +336,10 @@
 
     &__inner {
       width: 100%;
+    }
+
+    &--mini {
+      padding: 0;
     }
   }
 

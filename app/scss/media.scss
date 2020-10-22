@@ -50,6 +50,21 @@
 
 @media(max-width: 992px) {
 
+  .question {
+    &__inner {
+      flex-direction: column;
+    }
+
+    &__appointment {
+      margin: 0 auto;
+      order: 1;
+    }
+
+    &__description {
+      margin-bottom: 30px;
+    }
+  }
+
   .expirience {
     &__inner {
       flex-direction: column;
@@ -234,7 +249,7 @@
     position: fixed;
     top: 0;
     background-color: #fff;
-    left: -100%;
+    left: -576px;
     height: 100vh;
     overflow-y: scroll;
     z-index: 1;
@@ -338,7 +353,8 @@
       width: 100%;
     }
 
-    &--mini {
+    &--mini,
+    &--block {
       padding: 0;
     }
   }
@@ -424,6 +440,17 @@
 }
 
 @media(max-width: 576px) {
+
+  .question {
+    padding: 60px 0;
+  }
+
+  .aside {
+    &--opened {
+      max-width: 100%;
+      min-width: 100%;
+    }
+  }
 
   .newsletter {
     &__title {

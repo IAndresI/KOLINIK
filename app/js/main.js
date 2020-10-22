@@ -101,7 +101,7 @@ document.addEventListener("DOMContentLoaded", function () {
   });
 
   tabs({
-    button: ".aside__button",
+    button: ".aside__button--tab",
     content: ".details__content",
     activeClass: ".aside__button--active",
     tabToShow: 0,
@@ -142,18 +142,46 @@ document.addEventListener("DOMContentLoaded", function () {
   let detailsButton = document.querySelector(".details__menu"),
     detailFilter = document.querySelector(".details__aside"),
     detailsCloseButton = document.querySelector(".aside__menu"),
-    marginR = window.innerWidth - document.documentElement.clientWidth + "px";
+    marginR = window.innerWidth - document.documentElement.clientWidth + "px",
+    asideButton = document.querySelectorAll(".aside__button");
 
 
+  if (detailsButton || detailsCloseButton) {
+    detailsButton.addEventListener("click", () => {
+      detailFilter.classList.add("aside--opened");
+      document.documentElement.style.marginRight = marginR;
+      document.documentElement.style.overflow = "hidden";
+    });
+    detailsCloseButton.addEventListener("click", () => {
+      detailFilter.classList.remove("aside--opened");
+      document.documentElement.style.marginRight = 0;
+      document.documentElement.style.overflow = "visible";
+    });
+  }
 
-  detailsButton.addEventListener("click", () => {
-    detailFilter.classList.add("aside--opened");
-    document.documentElement.style.marginRight = marginR;
-    document.documentElement.style.overflow = "hidden";
+  if (asideButton[0]) asideButton.forEach(element => {
+    element.addEventListener("click", () => {
+      detailFilter.classList.remove("aside--opened");
+      document.documentElement.style.marginRight = 0;
+      document.documentElement.style.overflow = "visible";
+    });
   });
-  detailsCloseButton.addEventListener("click", () => {
-    detailFilter.classList.remove("aside--opened");
-    document.documentElement.style.marginRight = 0;
-    document.documentElement.style.overflow = "visible";
-  });
+
+  let accordionButton = document.querySelectorAll(".question__button"),
+    accordionContent = document.querySelectorAll(".question__answer");
+
+  if (accordionButton[0]) {
+    accordionButton.forEach((element, i) => {
+      element.addEventListener("click", () => {
+        accordionContent.forEach((elementContent, i1) => {
+          if (i1 == i) elementContent.classList.add("question__answer--active");
+          else elementContent.classList.remove("question__answer--active");
+        });
+        accordionButton.forEach(elementButton => {
+          if (elementButton == element) elementButton.classList.add("question__button--active");
+          else elementButton.classList.remove("question__button--active");
+        });
+      });
+    });
+  }
 });

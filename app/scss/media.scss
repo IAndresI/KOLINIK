@@ -50,6 +50,12 @@
 
 @media(max-width: 992px) {
 
+  .profile {
+    &__description {
+      margin-right: 0;
+    }
+  }
+
   .question {
     &__inner {
       flex-direction: column;
@@ -272,18 +278,17 @@
       margin-right: 0;
     }
 
-    &__menu {
-      display: flex;
-    }
-
     &__inner {
       flex-direction: column;
     }
   }
+
+  .menu-aside {
+    display: flex;
+  }
 }
 
 @media(max-width: 768px) {
-
   .title {
     &--special {
       flex-direction: column;
@@ -440,6 +445,24 @@
 }
 
 @media(max-width: 576px) {
+
+  .profile {
+    padding: 60px 0;
+
+    &__card {
+      flex-direction: column;
+    }
+
+    &__image {
+      border-radius: 0;
+      width: 100%;
+      max-width: 100%;
+    }
+
+    &__description {
+      overflow-x: scroll;
+    }
+  }
 
   .question {
     padding: 60px 0;

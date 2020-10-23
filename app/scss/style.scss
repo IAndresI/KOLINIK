@@ -475,32 +475,15 @@
   }
 }
 
-.details {
-  padding: 120px 0;
+.menu-aside {
 
-  &__menu {
-    display: none;
-    flex-direction: column;
-    margin: 0 auto 30px;
-    cursor: pointer;
+  display: none;
+  flex-direction: column;
+  margin: 0 auto 30px;
+  width: fit-content;
+  cursor: pointer;
 
-    &:focus,
-    &:hover {
-      outline: transparent;
-
-      .details__menu-line {
-        background-color: $blue;
-      }
-    }
-
-    &:active {
-      .details__menu-line {
-        background-color: $grey;
-      }
-    }
-  }
-
-  &__menu-line {
+  &__line {
     width: 50px;
     height: 5px;
     background-color: $grey;
@@ -511,6 +494,25 @@
       margin-bottom: 0;
     }
   }
+
+  &:focus,
+  &:hover {
+    outline: transparent;
+
+    .details__menu-line {
+      background-color: $blue;
+    }
+  }
+
+  &:active {
+    .details__menu-line {
+      background-color: $grey;
+    }
+  }
+}
+
+.details {
+  padding: 120px 0;
 
   &__inner {
     display: flex;
@@ -623,7 +625,7 @@
   }
 
   &__input {
-    padding: 20px 85px 20px 50px;
+    padding: 20px 85px 20px 30px;
     border: 1px solid #e5e5e5;
     border-radius: 50px;
     width: 100%;
@@ -632,6 +634,10 @@
     &:focus {
       outline: transparent;
       border-color: $blue
+    }
+
+    &::placeholder {
+      font-family: OpenSans, sans-serif;
     }
   }
 
@@ -2346,6 +2352,179 @@
       font-weight: 600;
       margin: 15px 0;
       color: $black;
+    }
+  }
+}
+
+.profile {
+  padding: 120px 0;
+
+  &__inner {
+    display: flex;
+  }
+
+  &__content {
+    margin-right: 30px;
+    flex-direction: column;
+  }
+
+  &__card {
+    display: flex;
+    background-color: $bg;
+    margin-bottom: 40px;
+    border: 1px solid #e5e5e5;
+    border-radius: 10px;
+  }
+
+  &__card-description {
+    padding: 40px 25px;
+  }
+
+  &__image-container {}
+
+  &__image {
+    border-radius: 10px 0 0 10px;
+    height: 100%;
+    max-width: 340px;
+    object-fit: cover;
+  }
+
+  &__table {
+    background-color: $bg;
+    border: 1px solid #e5e5e5;
+    border-radius: 10px;
+  }
+
+  &__name {
+    font-size: 22px;
+    font-weight: 600;
+    margin-bottom: 10px;
+    font-family: Poppins, sans-serif;
+  }
+
+  &__text {
+    margin: 0 0 30px;
+  }
+
+  &__post {
+    margin-bottom: 20px;
+  }
+
+  &__link {
+    padding: 10px 20px;
+    background-color: $blue;
+    color: #ffffff;
+    text-transform: uppercase;
+    font-size: 14px;
+    font-weight: 700;
+    font-family: Poppins, sans-serif;
+    border-radius: 40px;
+    border: 1px solid $blue;
+    transition: all .5s;
+
+    &:hover,
+    &:focus {
+      outline: transparent;
+      background-color: #ffffff;
+      color: $blue;
+    }
+
+    &:active {
+      background-color: $blue;
+      color: #ffffff;
+    }
+  }
+
+  &__list-item {
+    position: relative;
+    display: flex;
+    align-items: flex-start;
+    padding-left: 20px;
+    line-height: 27px;
+    margin-bottom: 20px;
+
+    &:before {
+      content: "";
+      margin-top: 7px;
+      position: absolute;
+      width: 8px;
+      height: 8px;
+      background-color: #777777;
+      left: 0;
+    }
+
+    &:last-child {
+      margin-bottom: 0;
+    }
+  }
+
+  &__list {
+    &--social {
+      display: flex;
+
+      .profile__list-item {
+        padding-left: 0;
+        margin-bottom: 0;
+
+        &:before {
+          display: none;
+        }
+      }
+    }
+  }
+
+  &__social-link {
+    display: flex;
+    width: 30px;
+    height: 30px;
+    align-items: center;
+    justify-content: center;
+    background-color: transparent;
+    border: 1px solid #e5e5e5;
+    border-radius: 50%;
+    margin-right: 10px;
+    transition: all .5s;
+
+    &:focus,
+    &:hover {
+      outline: transparent;
+      color: #ffffff;
+      background-color: $blue;
+    }
+
+    &:active {
+      outline: transparent;
+      color: #777777;
+      background-color: transparent;
+    }
+  }
+
+  &__table {
+    border: 1px solid #e5e5e5;
+    color: #777777;
+
+    th {
+      border-right: 1px solid #e5e5e5;
+      border-bottom: 1px solid #e5e5e5;
+      width: 285px;
+      height: 100%;
+      padding-left: 30px;
+      text-align: left;
+    }
+
+    td {
+      border-bottom: 1px solid #e5e5e5;
+      padding: 30px;
+    }
+
+    tr:last-child {
+      th {
+        border-bottom: none;
+      }
+
+      td {
+        border-bottom: none;
+      }
     }
   }
 }

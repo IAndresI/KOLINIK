@@ -108,6 +108,14 @@ document.addEventListener("DOMContentLoaded", function () {
     noContentAlert: ".details__nocontent"
   });
 
+  tabs({
+    button: ".aside__button--tab",
+    content: ".profile__content",
+    activeClass: ".aside__button--active",
+    tabToShow: 0,
+    noContentAlert: ".details__nocontent"
+  });
+
   let videoButton = document.querySelector(".theatre__button"),
     closeButton = document.querySelector(".popup__button"),
     popup = document.querySelector(".popup"),
@@ -139,8 +147,8 @@ document.addEventListener("DOMContentLoaded", function () {
     });
   }
 
-  let detailsButton = document.querySelector(".details__menu"),
-    detailFilter = document.querySelector(".details__aside"),
+  let detailsButton = document.querySelector(".menu-aside"),
+    detailFilter = document.querySelector(".aside"),
     detailsCloseButton = document.querySelector(".aside__menu"),
     marginR = window.innerWidth - document.documentElement.clientWidth + "px",
     asideButton = document.querySelectorAll(".aside__button");

@@ -81,6 +81,42 @@
 
 @media(max-width: 992px) {
 
+  .timeline {
+    &__item {
+      flex-direction: column;
+
+      &:nth-child(2n+2) {
+        .timeline__image-container {
+          margin: 0 0 60px;
+          order: 0;
+        }
+
+        .timeline__date {
+          left: 50%;
+        }
+      }
+    }
+
+    &__image-container {
+      margin: 0 0 60px;
+    }
+
+    &__description {
+      max-width: 100%;
+    }
+
+    &__date {
+      left: 50%;
+      right: auto;
+      bottom: -128px;
+      top: auto;
+      transform: translateX(-50%);
+      border-color: $blue;
+      background-color: #ffffff;
+      color: $blue;
+    }
+  }
+
   .choose {
     &__image-container {
       width: 100%;
@@ -556,6 +592,27 @@
 }
 
 @media(max-width: 576px) {
+
+  .timeline {
+    padding: 60px 0;
+
+    &__image {
+      max-width: 280px;
+    }
+
+    &__image-container {
+      height: 280px;
+    }
+
+    &__description {
+      border: 5px solid $blue;
+      padding: 60px 20px 30px;
+    }
+
+    &__date {
+      bottom: -113px;
+    }
+  }
 
   .choose {
     padding: 60px 0;

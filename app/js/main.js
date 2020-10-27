@@ -116,6 +116,14 @@ document.addEventListener("DOMContentLoaded", function () {
     noContentAlert: ".details__nocontent"
   });
 
+  tabs({
+    button: ".privacy__button",
+    content: ".privacy__description",
+    activeClass: ".privacy__button--active",
+    tabToShow: 0,
+    animate: true
+  });
+
   let videoButton = document.querySelector(".theatre__button"),
     closeButton = document.querySelector(".popup__button"),
     popup = document.querySelector(".popup"),

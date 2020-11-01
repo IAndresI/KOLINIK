@@ -81,6 +81,17 @@
 
 @media(max-width: 992px) {
 
+  .blog {
+    &__inner {
+      flex-direction: column;
+    }
+
+    &__list {
+      width: 100%;
+      margin-right: 0;
+    }
+  }
+
   .timeline {
     &__item {
       flex-direction: column;
@@ -593,6 +604,19 @@
 
 @media(max-width: 576px) {
 
+  .pagination {
+    justify-content: center;
+    margin-top: 20px;
+  }
+
+  .blog {
+    padding: 60px;
+
+    &__item {
+      padding: 20px 0;
+    }
+  }
+
   .timeline {
     padding: 60px 0;
 
@@ -735,6 +759,14 @@
 
     &__date {
       min-width: 160px;
+    }
+
+    &--big {
+      .news {
+        &__image-container {
+          height: 250px;
+        }
+      }
     }
   }
 

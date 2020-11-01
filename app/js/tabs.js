@@ -12,7 +12,7 @@ function tabs({
     therescontent = false,
     nothingsFind = document.querySelector(noContentAlert);
 
-  if (tab_buttons[0] && tab_content) {
+  if (tab_buttons[0] && tab_content[0]) {
     activeClass = activeClass.substring(1, activeClass.length);
     let temp = 0;
 

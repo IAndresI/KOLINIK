@@ -162,7 +162,7 @@ document.addEventListener("DOMContentLoaded", function () {
     asideButton = document.querySelectorAll(".aside__button");
 
 
-  if (detailsButton || detailsCloseButton) {
+  if (detailsButton && detailsCloseButton) {
     detailsButton.addEventListener("click", () => {
       detailFilter.classList.add("aside--opened");
       document.documentElement.style.marginRight = marginR;

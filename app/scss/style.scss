@@ -1908,7 +1908,8 @@
     border-radius: 50%;
     transition: all .5s;
 
-    &:hover,&:focus {
+    &:hover,
+    &:focus {
       outline: transparent;
       color: $blue;
       transform: scale(1.2);
@@ -1977,7 +1978,7 @@
     &--sm {
       display: block;
       height: 260px;
-      border-radius:10px;
+      border-radius: 10px;
     }
   }
 
@@ -2001,12 +2002,13 @@
     transition: all .5s;
 
     &--link {
+
       &:hover,
       &:focus {
         outline: transparent;
         color: $blue;
       }
-  
+
       &:active {
         color: #777777;
       }
@@ -2105,6 +2107,14 @@
         &:active {
           color: $blue;
         }
+      }
+
+      &__description {
+        padding: 0;
+      }
+
+      &__tag-container {
+        border-radius: 10px;
       }
     }
   }
@@ -3263,6 +3273,7 @@
   &__item {
     &--details {
       width: 730px;
+      margin-bottom: 80px;
     }
   }
 }
@@ -3313,9 +3324,15 @@
 }
 
 .comments {
-  padding: 0 30px;  
+  padding: 0 20px;
+  max-width: 730px;
+
+  &__list {
+    margin-bottom: 100px;
+  }
+
   &__title {
-    font-family: Poppins,sans-serif;
+    font-family: Poppins, sans-serif;
     font-weight: 600;
     font-size: 24px;
     margin-bottom: 40px;
@@ -3342,7 +3359,8 @@
     right: 0;
     font-weight: 600;
 
-    &:hover,&:focus {
+    &:hover,
+    &:focus {
       outline: transparent;
       color: $blue;
       border-color: $blue;
@@ -3364,7 +3382,7 @@
     display: flex;
     flex-direction: column;
     font-size: 18px;
-    font-family: Poppims,sans-serif;
+    font-family: Poppims, sans-serif;
     font-weight: 600;
     margin-bottom: 20px;
   }
@@ -3374,7 +3392,7 @@
   }
 
   &__time {
-    font-family: OpenSans,sans-serif;
+    font-family: OpenSans, sans-serif;
     font-size: 14px;
     color: $blue;
   }
@@ -3382,7 +3400,8 @@
 
   &__image-container {
     margin-top: 40px;
-    width: 80px;
+    min-width: 80px;
+    max-width: 80px;
     height: 80px;
     border-radius: 50%;
     overflow: hidden;
@@ -3392,6 +3411,58 @@
   &__description {
     padding: 40px 0;
     border-bottom: 1px solid #e5e5e5;
+  }
+
+  &__input {
+    width: 48%;
+    padding: 15px 20px;
+    border-radius: 50px;
+    border: 1px solid #e5e5e5;
+    margin-bottom: 30px;
+    font-family: OpenSans, sans-serif;
+    transition: all .5s;
+
+    &--lg {
+      width: 100%;
+      resize: none;
+      height: 100px;
+      padding: 20px 25px;
+    }
+
+    &:focus {
+      outline: transparent;
+      box-shadow: 0 0 0 5px $black;
+    }
+  }
+
+  &__submit {
+    padding: 15px 40px;
+    background-color: $blue;
+    border-radius: 50px;
+    transition: all .5s;
+    border: 1px solid $blue;
+    font-family: Poppins, sans-serif;
+    font-weight: 700;
+    color: #ffffff;
+    cursor: pointer;
+
+    &:hover,
+    &:focus {
+      outline: transparent;
+      background-color: #ffffff;
+      color: $blue;
+    }
+
+    &:active {
+      outline: transparent;
+      background-color: $blue;
+      color: #ffffff;
+    }
+  }
+
+  &__row {
+    display: flex;
+    justify-content: space-between;
   }
 }
 

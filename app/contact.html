@@ -4,7 +4,7 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>KOLINIK - Registration</title>
+  <title>KOLINIK - Contact Us</title>
   <link rel="shortcut icon" type="image/x-icon" href="./images/logo/favicon.png" />
   <link rel="stylesheet" href="./css/style.min.css">
 </head>
@@ -75,7 +75,7 @@
   </header>
   <main class="main">
     <section class="preview preview--small" style="background-image: url(./images/ourDoctots/bg.png);">
-      <span class="preview__name">Registration</span>
+      <span class="preview__name">Contact Us</span>
     </section>
     <section class="breadcrumps">
       <div class="container">
@@ -84,37 +84,62 @@
             <a class="breadcrumps__link link" href="./index.html">home</a>
           </li>
           <li class="breadcrumps__item breadcrumps__item--current">
-            <span class="breadcrumps__link link" href="#">register</span>
+            <span class="breadcrumps__link link" href="#">contact</span>
           </li>
         </ul>
       </div>
     </section>
-    <section class="entry entry--registration">
+    <section class="contact">
       <div class="container">
-        <div class="entry__inner">
-          <div class="entry__title title">
-            <div class="title__main">Create Account</div>
+        <div class="contact__inner">
+          <div class="contact__form-container">
+            <div class="contact__title title">
+              <div class="title__main">Send Message</div>
+            </div>
+            <form class="contact__form">
+              <input type="text" class="contact__input" placeholder="Your Name">
+              <input type="email" class="contact__input" placeholder="Email">
+              <input type="text" class="contact__input" placeholder="Website">
+              <textarea class="contact__input contact__input--big" placeholder="Write Message"></textarea>
+              <button type="submit" class="contact__submit">send message</button>
+            </form>
           </div>
-          <form class="entry__form">
-            <input type="text" class="entry__input" placeholder="First Name">
-            <input type="text" class="entry__input" placeholder="Last Name">
-            <input type="email" class="entry__input" placeholder="Email">
-            <input type="tel" class="entry__input" placeholder="Phone Number">
-            <input type="password" class="entry__input" placeholder="Password">
-            <input type="password" class="entry__input" placeholder="Re-Password">
-            <label class="entry__label">
-              Lorem ipsum dolor sit amet, cras venenatis dolor.
-              <input type="checkbox" class="entry__input">
-            </label>
-            <button type="submit" class="entry__submit">create account</button>
-          </form>
-          <div class="entry__row">
-            <div class="entry__question">
-              <a href="#" class="entry__link link">Have your any account in here?</a>
+          <div class="contact__information">
+            <ul class="contact__list list">
+              <li class="contact__item">
+                <div class="contact__item-title">Office Address</div>
+                <address class="contact__item-text text">
+                  4920 Northwest 2 Avenue
+                  Medford, MN 55049
+                  kigkong,USA
+                </address>
+              </li>
+              <li class="contact__item">
+                <div class="contact__item-title">Phone Number</div>
+                <a class="contact__link link text" href="tel:+888-555-333">+888-555-333</a>
+              </li>
+              <li class="contact__item">
+                <div class="contact__item-title">Email Address</div>
+                <a class="contact__link link text" href="mailto:kolinik@gmail.com">kolinik@gmail.com</a>
+                <a class="contact__link link text" href="mailto:kolinik@yandex.ru">kolinik@yandex.ru</a>
+              </li>
+              <li class="contact__item">
+                <div class="contact__item-title">Fax Number</div>
+                <address class="contact__item-text text">
+                  4920 Northwest 2 Avenue
+                  Medford, MN 55049
+                  kigkong,USA
+                </address>
+              </li>
+            </ul>
+            <div class="contact__subtitle">
+              Call Now
+              <a href="tel:+888-555-333" class="contact__link">+888-555-333</a>
             </div>
-            <div class="entry__question">
-              <a href="#" class="entry__link link">Login</a>
-            </div>
+            <form class="contact__form contact__form--sm">
+              <input type="tel" class="contact__input" placeholder="Enter Phone Number">
+              <button class="contact__submit" type="submit">Free call back</button>
+            </form>
           </div>
         </div>
       </div>

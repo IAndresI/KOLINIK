@@ -3468,7 +3468,7 @@
   }
 }
 
-.login {
+.entry {
   padding: 120px 0;
 
   &__title {
@@ -3501,14 +3501,15 @@
     height: 50px;
     background-color: $blue;
     border-radius: 50px;
-    font-family: Poppins,sans-serif;
+    font-family: Poppins, sans-serif;
     font-weight: 700;
     color: #ffffff;
     border: 1px solid $blue;
     transition: all .5s;
 
-    
-    &:hover,&:focus {
+
+    &:hover,
+    &:focus {
       outline: transparent;
       background-color: #ffffff;
       color: $blue;
@@ -3522,20 +3523,22 @@
         background-color: #da1c36;
       }
 
-      &:hover,&:focus {
+      &:hover,
+      &:focus {
         color: #da1c36;
       }
     }
 
     &--blue {
       background-color: #1da1f2;
-      border: 1px solid  #1da1f2;
+      border: 1px solid #1da1f2;
 
       &:active {
         background-color: #1da1f2;
       }
 
-      &:hover,&:focus {
+      &:hover,
+      &:focus {
         color: #1da1f2;
       }
     }
@@ -3548,7 +3551,8 @@
     width: fit-content;
     margin: 0 auto 30px;
 
-    &:after,&:before {
+    &:after,
+    &:before {
       content: "";
       position: absolute;
       left: 0;
@@ -3574,7 +3578,7 @@
     padding: 20px;
     border-radius: 50px;
     border: 1px solid #e5e5e5;
-    font-family: OpenSans,sans-serif;
+    font-family: OpenSans, sans-serif;
     font-size: 16px;
     margin-bottom: 20px;
     transition: all .5s;
@@ -3588,7 +3592,7 @@
   &__submit {
     display: block;
     border: 1px solid $blue;
-    font-family: Poppins,sans-serif;
+    font-family: Poppins, sans-serif;
     font-weight: 700;
     padding: 20px 0;
     width: 100%;
@@ -3602,7 +3606,8 @@
     transition: all .5s;
     cursor: pointer;
 
-    &:hover,&:focus {
+    &:hover,
+    &:focus {
       outline: transparent;
       background-color: #ffffff;
       color: $blue;
@@ -3622,13 +3627,50 @@
 
   &__question {
     color: $grey;
-    &:hover,&:focus {
+
+    &:hover,
+    &:focus {
       outline: transparent;
       color: $blue;
     }
 
     &:active {
       color: #ffffff;
+    }
+  }
+
+  &__label {
+    display: flex;
+    margin-bottom: 30px;
+    color: $grey;
+
+    .entry__input {
+      order: -1;
+      appearance: none;
+      padding: 0;
+      height: 20px;
+      min-width: 20px;
+      border-radius: 0;
+      margin-right: 10px;
+      position: relative;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      border-color: $grey;
+
+      &:before {
+        content: "\f00c";
+        font-family: icomoon;
+        color: $blue;
+        transition: all .2s;
+        transform: scale(0);
+      }
+
+      &:checked {
+        &:before {
+          transform: scale(1);
+        }
+      }
     }
   }
 }
